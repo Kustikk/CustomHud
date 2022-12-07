@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "customhud",
+  "version": "${version}",
+  "name": "CustomHud",
+  "description": "Desc",
+  "authors": [
+    "Kustik_"
+  ],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/CustomHud/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "customhud.customhud.client.CustomHudClient"
+    ],
+    "main": [
+      "customhud.customhud.CustomHud"
+    ]
+  },
+  "mixins": [
+    "CustomHud.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.11",
+    "fabric": "*",
+    "minecraft": "1.19.2"
+  }
+}
