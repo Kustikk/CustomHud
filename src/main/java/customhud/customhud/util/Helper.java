@@ -27,9 +27,18 @@ public class Helper {
         return 0;
     }
 
-    public static void PlaySound() {
+    public static void PlaySound(int soundId) {
         MinecraftClient client = MinecraftClient.getInstance();
-        PositionedSoundInstance sound = new PositionedSoundInstance(SoundEvents.ENTITY_ITEM_PICKUP.getId(), SoundCategory.PLAYERS, 0.6f, 0.3f, SoundInstance.createRandom(), false, 0, SoundInstance.AttenuationType.NONE, 0, 0, 0, true);
+        PositionedSoundInstance sound;
+        if(soundId == 0)
+        {
+            sound = new PositionedSoundInstance(SoundEvents.ENTITY_ITEM_PICKUP.getId(), SoundCategory.PLAYERS, 0.6f, 0.3f, SoundInstance.createRandom(), false, 0, SoundInstance.AttenuationType.NONE, 0, 0, 0, true);
+        }
+        else
+        {
+            sound = new PositionedSoundInstance(SoundEvents.ENTITY_ITEM_BREAK.getId(), SoundCategory.PLAYERS, 0.6f, 0.3f, SoundInstance.createRandom(), false, 0, SoundInstance.AttenuationType.NONE, 0, 0, 0, true);
+        }
+
         client.getSoundManager().play(sound);
     }
 

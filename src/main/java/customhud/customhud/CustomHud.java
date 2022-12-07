@@ -8,7 +8,7 @@ import org.slf4j.LoggerFactory;
 
 public class CustomHud implements ModInitializer {
 
-    public static final Logger LOGGER = LoggerFactory.getLogger("modid");
+    public static final Logger LOGGER = LoggerFactory.getLogger("customhud");
     public static boolean notify = true;
     public static String playername = MinecraftClient.getInstance().getSession().getUsername();
 
